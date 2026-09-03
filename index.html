@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>易搜數碼 Easoug — 免費好物 · 繼續流動</title>
+  <meta name="description" content="易搜數碼 Easoug：收集社區可重用好物，免費提取、支持環保。查看即時庫存並預約提取。">
+  <meta name="theme-color" content="#11603f">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon-180.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand-row">
+        <a class="brand" href="/" style="color:#fff;text-decoration:none">
+          <span class="logo">♻️</span>
+          <span>
+            <h1 id="shop-name">易搜數碼 Easoug</h1>
+            <div class="tagline" id="shop-tagline">好好用 · 唔好嘥</div>
+          </span>
+        </a>
+      </div>
+      <nav class="nav-tabs">
+        <a href="/" class="active">首頁</a>
+        <a href="/my-reservations.html">我的預約</a>
+        <a href="/support.html">支援易搜</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="toolbar">
+      <button class="chip active" data-status="" id="chip-all">全部<span class="n" id="n-all"></span></button>
+      <button class="chip" data-status="available" id="chip-available">可取<span class="n" id="n-available"></span></button>
+      <button class="chip" data-status="reserved" id="chip-reserved">保留中<span class="n" id="n-reserved"></span></button>
+      <div class="search">
+        <span aria-hidden="true">🔍</span>
+        <input id="search" type="text" placeholder="搜尋物品，例如：書架、單車…" autocomplete="off">
+      </div>
+    </div>
+    <div id="notice" class="notice-box"></div>
+    <div id="grid" class="grid">載入中…</div>
+    <div id="empty" class="empty" hidden>
+      <div class="big">📦</div>
+      暫時沒有符合條件的物品，歡迎稍後再來看看！
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="foot-info" id="foot-info"></div>
+    <div id="foot-social"></div>
+    <div>易搜數碼 Easoug · 讓好物繼續流動</div>
+  </footer>
+
+  <script type="module" src="/js/index.js"></script>
+</body>
+</html>

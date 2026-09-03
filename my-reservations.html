@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>我的預約 — 易搜數碼 Easoug</title>
+  <meta name="theme-color" content="#11603f">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon-180.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand-row">
+        <a class="brand" href="/" style="color:#fff;text-decoration:none">
+          <span class="logo">♻️</span>
+          <span><h1>易搜數碼 Easoug</h1><div class="tagline">好好用 · 唔好嘥</div></span>
+        </a>
+      </div>
+      <nav class="nav-tabs">
+        <a href="/">首頁</a>
+        <a href="/my-reservations.html" class="active">我的預約</a>
+        <a href="/support.html">支援易搜</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="page-head">
+      <h2>我的預約</h2>
+      <p>輸入預約時使用的電話號碼，即可查看及取消預約。</p>
+    </div>
+    <form class="sheet" id="form" style="margin-top:10px">
+      <div class="field" style="margin-bottom:10px">
+        <label for="phone">電話號碼</label>
+        <input type="tel" id="phone" inputmode="tel" maxlength="13" autocomplete="tel" placeholder="如 5123 4567" required>
+      </div>
+      <button class="btn btn-primary" type="submit">查詢預約</button>
+      <p class="muted" id="quota-note" style="margin:10px 0 0"></p>
+      <p class="muted" style="margin:4px 0 0">預約資料只會以電話號碼查詢，並不會儲存在你的手機之外的地方。</p>
+    </form>
+    <div id="list"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div id="foot-social"></div>
+    <div>易搜數碼 Easoug · 讓好物繼續流動</div>
+  </footer>
+
+  <script type="module" src="/js/my-reservations.js"></script>
+</body>
+</html>

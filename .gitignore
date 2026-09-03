@@ -1,0 +1,18 @@
+# runtime data (auto-created with demo seed on first start)
+db.json
+db.json.*
+
+# logs / os noise
+*.log
+.DS_Store
+Thumbs.db
+
+# tooling
+node_modules/
+
+# local agent/tooling workspace (not part of the app)
+.freebuff/
+.agents/
+.claude/
+agent/
+skills-lock.json

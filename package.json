@@ -1,0 +1,16 @@
+{
+  "name": "easoug-digital-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "易搜數碼 Easoug — item-reuse platform for a community shop: mobile PWA (browse + reserve + support) with an admin panel. Zero-dependency Node server + JSON file DB.",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node --test",
+    "icons": "node scripts/gen-icons.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

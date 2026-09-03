@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>後台登入 — 易搜數碼 Easoug</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="/images/icons/icon-192.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+  <div class="login-wrap">
+    <form class="login-card" id="login-form">
+      <div class="logo-big">♻️</div>
+      <h1>易搜數碼 Easoug</h1>
+      <p class="sub">店主／管理員後台</p>
+      <div class="notice-box amber" id="expired-note" hidden>登入已過期，請重新登入。</div>
+      <div class="field">
+        <label for="password">管理密碼</label>
+        <input type="password" id="password" autocomplete="current-password" placeholder="請輸入管理密碼" required autofocus>
+      </div>
+      <button class="btn btn-primary" type="submit" id="login-btn">登入</button>
+      <p class="warn-hint">MVP 預設密碼為 <code>easoug1234</code>。正式使用前請以環境變數 <code>ADMIN_PASSWORD</code> 更改。</p>
+      <p style="text-align:center;margin:14px 0 0"><a href="/">← 返回公眾網站</a></p>
+    </form>
+  </div>
+
+  <script type="module" src="/admin/js/login.js"></script>
+</body>
+</html>

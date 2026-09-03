@@ -1,0 +1,155 @@
+{
+  "project_name": "easoug-digital-mvp",
+  "description": "易搜數碼平台 - 手機網頁/PWA + 後台管理",
+  "stack": {
+    "frontend": "html_css_javascript_pwa",
+    "backend": "json_server_or_supabase",
+    "database": "json_or_sqlite",
+    "hosting": "vercel_or_netlify",
+    "deployment": "static_site_with_api"
+  },
+  "target_users": [
+    "資源匱乏家庭",
+    "環保支持者", 
+    "學生/年輕人",
+    "店主/後台管理者"
+  ],
+  "pages": [
+    {
+      "path": "/",
+      "name": "首頁",
+      "purpose": "展示可取物品",
+      "key_content": ["物品卡片列表", "圖片+標題+狀態"]
+    },
+    {
+      "path": "/item.html",
+      "name": "物品詳細",
+      "purpose": "了解物品細節",
+      "key_content": ["圖片", "描述", "規格", "狀態", "預約表單"]
+    },
+    {
+      "path": "/reserve.html",
+      "name": "預約成功",
+      "purpose": "確認預約",
+      "key_content": ["預約編號", "姓名", "電話", "取件時間"]
+    },
+    {
+      "path": "/my-reservations.html",
+      "name": "我的預約",
+      "purpose": "查看已預約",
+      "key_content": ["預約列表", "取消功能"]
+    },
+    {
+      "path": "/support.html",
+      "name": "支援我",
+      "purpose": "籌集易搜",
+      "key_content": ["捐款金額選項", "付款連結"]
+    }
+  ],
+  "admin_pages": [
+    {
+      "path": "/admin/index.html",
+      "name": "後台登入",
+      "purpose": "保護管理權限",
+      "key_content": ["密碼驗證"]
+    },
+    {
+      "path": "/admin/items.html",
+      "name": "物品管理",
+      "purpose": "新增/編輯/刪除物品",
+      "key_content": ["表單上傳", "狀態切換"]
+    },
+    {
+      "path": "/admin/reservations.html",
+      "name": "預約管理",
+      "purpose": "查看/取消預約",
+      "key_content": ["列表", "狀態標籤"]
+    },
+    {
+      "path": "/admin/reports.html",
+      "name": "數據報表",
+      "purpose": "觀察營運成果",
+      "key_content": ["物品流通數", "提取率", "籌款金額"]
+    }
+  ],
+  "api_endpoints": [
+    "/api/items",
+    "/api/items/{id}",
+    "/api/items/{id}/status",
+    "/api/reservations",
+    "/api/reservations/{id}",
+    "/api/reservations/{id}/cancel",
+    "/api/admin/items",
+    "/api/admin/items/{id}/status",
+    "/api/admin/reservations",
+    "/api/reports/summary"
+  ],
+  "features": [
+    "realtime_status_sync",
+    "reservation_form",
+    "item_listing",
+    "admin_panel",
+    "donation_link",
+    "status_toggle",
+    "reservation_cancellation",
+    "analytics_report"
+  ],
+  "data_models": {
+    "item": {
+      "id": "string",
+      "name": "string",
+      "description": "string",
+      "image_url": "string",
+      "status": "enum[available, reserved, taken, sold]",
+      "type": "enum[free, donation, special]",
+      "price": "number|null",
+      "created_at": "datetime",
+      "updated_at": "datetime"
+    },
+    "reservation": {
+      "id": "string",
+      "item_id": "string",
+      "customer_name": "string",
+      "phone": "string",
+      "pickup_time": "datetime",
+      "status": "enum[pending, confirmed, completed, cancelled, expired]",
+      "created_at": "datetime",
+      "updated_at": "datetime"
+    },
+    "item_action": {
+      "id": "string",
+      "item_id": "string",
+      "admin_id": "string",
+      "action": "enum[reserve, release, take, sell]",
+      "notes": "string",
+      "created_at": "datetime"
+    }
+  },
+  "mvp_requirements": {
+    "must_have": [
+      "Item listing page",
+      "Item detail page with status",
+      "Reservation form (name + phone + pickup_time)",
+      "Status sync API",
+      "Admin item management"
+    ],
+    "should_have": [
+      "Free extraction quota per phone per month",
+      "Donation link",
+      "Photo upload for items"
+    ],
+    "could_have": [
+      "Item search",
+      "Location navigation"
+    ]
+  },
+  "technical_notes": {
+    "pwa_features": [
+      "installable",
+      "offline_cache_for_items_list"
+    ],
+    "sync_mechanism": "status_change_webhook_or_polling",
+    "expiration_policy": "reservation_expires_after_24_hours",
+    "privacy": "minimal_data_collection_only_name_phone"
+  }
+}

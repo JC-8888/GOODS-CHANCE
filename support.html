@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>支援易搜 — 易搜數碼 Easoug</title>
+  <meta name="theme-color" content="#11603f">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon-180.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand-row">
+        <a class="brand" href="/" style="color:#fff;text-decoration:none">
+          <span class="logo">♻️</span>
+          <span><h1>易搜數碼 Easoug</h1><div class="tagline">好好用 · 唔好嘥</div></span>
+        </a>
+      </div>
+      <nav class="nav-tabs">
+        <a href="/">首頁</a>
+        <a href="/my-reservations.html">我的預約</a>
+        <a href="/support.html" class="active">支援易搜</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="page-head">
+      <h2>❤️ 支持易搜，讓好物繼續流動</h2>
+      <p>易搜靠街坊同捐款支持營運。你的每一分捐款，都用於收集、清潔、修理及上架更多可重用物品。</p>
+    </div>
+
+    <div class="sheet">
+      <h3>捐款金額</h3>
+      <div class="amounts">
+        <button type="button" class="amount fixed active" data-amount="50">HK$50<span class="cur">小小心意</span></button>
+        <button type="button" class="amount fixed" data-amount="100">HK$100<span class="cur">支持一週</span></button>
+        <button type="button" class="amount fixed" data-amount="200">HK$200<span class="cur">支持一個月上架</span></button>
+        <button type="button" class="amount fixed" data-amount="500">HK$500<span class="cur">大手支持</span></button>
+        <label class="amount" id="custom-box" style="display:grid;align-content:center">
+          <input type="radio" name="amt" id="custom" hidden>
+          <span>自訂</span>
+          <input type="number" id="custom-amt" min="1" placeholder="HK$" style="border:0;font-size:15px;text-align:center;font-weight:700;background:transparent;outline:none;width:100%">
+        </label>
+      </div>
+      <p class="muted" id="pay-note" style="margin:12px 0"></p>
+      <div class="stack-actions">
+        <button class="btn btn-amber disabled-link" id="go" type="button">選擇捐款金額</button>
+      </div>
+      <div id="no-link" class="notice-box amber" hidden>
+        店主尚未設定收款連結。可以直接致電或到店支持，感謝你！<br>
+        <span data-meta class="muted"></span>
+      </div>
+    </div>
+
+    <div class="notice-box">
+      <strong>其他支持方式</strong><br>
+      · 捐出不再使用但狀況良好的物品<br>
+      · 來做義工，幫手清潔整理物品<br>
+      · 將易搜介紹給身邊嘅朋友
+    </div>
+
+    <div class="sheet social-sheet" id="social-sheet" hidden>
+      <h3>追蹤易搜</h3>
+      <p class="muted" style="margin-top:-6px">最新好物上架、收物活動同店鋪消息，第一時間喺社交平台睇到。</p>
+      <div class="social-btns" id="social-btns"></div>
+    </div>
+
+    <div data-meta class="detail-meta" style="padding:0 4px 20px"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div id="foot-social"></div>
+    <div>易搜數碼 Easoug · 讓好物繼續流動</div>
+  </footer>
+
+  <script type="module" src="/js/support.js"></script>
+</body>
+</html>

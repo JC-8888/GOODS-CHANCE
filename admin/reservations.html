@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>預約管理 — 易搜數碼 Easoug 後台</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="/images/icons/icon-192.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin">
+  <header class="admin-top">
+    <div class="inner">
+      <span class="brand">♻️ 易搜數碼 後台</span>
+      <nav>
+        <a href="/admin/items.html">物品管理</a>
+        <a href="/admin/reservations.html" class="active">預約管理</a>
+        <a href="/admin/reports.html">數據報表</a>
+        <button class="logout-link" id="logout">登出</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="admin-shell">
+    <div class="panel">
+      <h2>🗓️ 預約管理
+        <span class="actions">
+          <button class="btn btn-ghost btn-sm" id="btn-export">⬇ 匯出 CSV</button>
+          <a class="btn btn-ghost btn-sm" href="/admin/items.html">← 物品管理</a>
+        </span>
+      </h2>
+      <div class="filters">
+        <div class="grow">
+          <input type="text" id="search" placeholder="搜尋姓名／電話／物品…">
+        </div>
+        <span id="chip-row"></span>
+      </div>
+      <div class="tbl-wrap">
+        <table class="tbl" id="rsv-tbl">
+          <thead><tr><th>預約時間</th><th>物品</th><th>姓名／電話</th><th>取件時間</th><th>狀態</th><th>操作</th></tr></thead>
+          <tbody id="rsv-body"><tr><td colspan="6">載入中…</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/admin/js/reservations.js"></script>
+</body>
+</html>
